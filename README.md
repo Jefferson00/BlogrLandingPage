@@ -6,6 +6,7 @@ This is a solution to the [Blogr landing page challenge on Frontend Mentor](http
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [Links](#links)
   - [Screenshot](#screenshot)
 - [My process](#my-process)
   - [Built with](#built-with)
