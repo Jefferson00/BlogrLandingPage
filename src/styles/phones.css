@@ -1,0 +1,107 @@
+.phonesContainer{
+    display: flex;
+    height: 25rem;
+    background:linear-gradient(55deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    border-radius: 0 5.938rem 0 5.938rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 7rem;
+    margin-top: 3.5rem;
+}
+
+.phonesContainer .imgPhones{
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/images/illustration-phones.svg');
+    width: 100%;
+    background-size: cover;
+    height: 35rem;
+    z-index: 5;
+    margin-left: 7rem;
+    position: relative;
+    top: 1rem;
+}
+
+.phonesContainer .textContainer{
+    padding-right: 11rem;
+    z-index: 5;
+}
+
+.phonesContainer .textContainer h1{
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.phonesContainer .textContainer p{
+    color: var(--white);
+    font-family: Overpass, sans-serif; 
+    font-weight: 300;
+    margin-top: 1rem;
+    line-height: 1.75rem;
+}
+
+.phonesContainer .bgPhonesContainer{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    border-top-right-radius: 95px;
+}
+
+.phonesContainer .bgPatternPhones{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url('/images/bg-pattern-circles.svg');
+    background-position: -80% 85%;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1080px){
+    .phonesContainer .imgPhones{
+        background-size: contain;
+    }
+}
+
+@media (max-width: 768px){
+    .phonesContainer{
+        height: 47.5rem;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 17.5rem;
+        
+    }
+
+    .phonesContainer .bgPatternPhones{
+        background-position: 50% -311%;
+        background-size: 160%;
+    }
+    
+    .phonesContainer .textContainer{
+        text-align: center;
+        padding: 0 2rem;
+        position: relative;
+        top: -7rem;
+    }
+
+    .phonesContainer .textContainer h1{
+        font-size: 2.75rem;
+    }
+
+    .phonesContainer .textContainer p{
+        font-size: 1.25rem;
+        line-height: 2.25rem;
+    }
+
+    .phonesContainer .imgPhones{
+        width: 100%;
+        background-size: contain;
+        height: 27.75rem;
+        margin-left: 0;
+        top: -10rem;
+    }
+}

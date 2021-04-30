@@ -1,0 +1,391 @@
+.headerContainer{
+    height: 80vh;
+    background:linear-gradient(140deg, hsl(13, 100%, 72%) 0%, hsl(353, 100%, 62%) 36%);
+    border-bottom-left-radius: 90px;
+    padding: 3.87rem 10rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+header.headerMobile{
+    display: none;
+}
+
+header div{
+    z-index: 5;
+}
+
+header .menuContainer{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    z-index: 10;
+}
+
+header .menuContainer a{
+   
+    color: var(--white);
+    font-size: 0.87rem;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    font-weight: 700;
+    
+}
+
+header .menuContainer a:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.menuContainer img{
+    padding-bottom: 1.5rem;
+}
+
+.menuContainer .dropdownMenu{
+    margin-left: 3.5rem;
+    display: flex;
+    position: relative;
+}
+
+.dropdownContent{
+    position: absolute;
+    background-color: var(--white);
+    padding: 2rem 1rem;
+    min-width: 10rem;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+}
+
+.dropdownContent a{
+    color: var(--desaturated-blue) !important;
+}
+
+.dropdownContent a + a{
+    margin-top: 1rem;
+}
+
+.dropdownContent a:hover{
+    color: var(--blue-black);
+    font-weight: 700;
+}
+
+.dropdownItem{
+    padding-bottom: 1.5rem;
+}
+
+.dropdownItem::after{
+    content: url('/images/icon-arrow-light.svg');
+    margin-left: 0.3rem;
+    margin-right: 1rem;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.dropdownItem:hover::after{
+    transform: rotate(180deg) translateY(-3px);
+}
+
+.dropdownItem:hover .dropdownContent{
+    display: flex;
+}
+
+.dropdownContent:hover{
+    display: flex;
+}
+
+.authButtons button{
+    border: none;
+    height: 2.87rem;
+}
+
+.authButtons button:first-child{
+    color: var(--white);
+    background-color: transparent;
+    margin-right: 2rem;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.authButtons button:first-child:hover{
+    opacity: 1;
+}
+
+.authButtons button:last-child{
+    color: var(--red);
+    background-color: var(--white);
+    margin-right: 2rem;
+    padding: 0 2.75rem;
+    border-radius: 20px;
+    transition: all 0.2s;
+}
+
+.authButtons button:last-child:hover{
+    background-color: var(--red-light);
+    color: var(--white);
+}
+
+.backgroundImageContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-bottom-left-radius: 90px;
+}
+
+span.headerBackgroundImage{
+    display: inline-block;
+    background-image: url('/images/bg-pattern-intro.svg');
+    background-position: 30%;
+    width: 100%;
+    height: 100%;
+}
+
+.headerContainer main{
+    z-index: 5;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.headerContainer .textContainer{
+    text-align: center;
+}
+
+.headerContainer main h1{
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.headerContainer main p{
+    font-family: Overpass, sans-serif;
+    font-weight: 300;
+    color: var(--white);
+    margin-top: 1rem;
+}
+
+.buttonsContainer{
+    margin-top: 1.87rem;
+}
+
+.buttonsContainer button{
+    border: none;
+    height: 2.87rem;
+    border-radius: 20px;
+    width: 8.6rem;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+
+.buttonsContainer button:first-child{
+    background-color: var(--white);
+    color: var(--red);
+}
+
+.buttonsContainer button:first-child:hover{
+    background-color: var(--red-light);
+    color: var(--white);
+}
+
+.buttonsContainer button:last-child{
+    background-color: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    margin-left: 1rem;
+}
+
+.buttonsContainer button:last-child:hover{
+    background-color: var(--white);
+    color: var(--red);
+}
+
+
+@media (max-width: 768px){
+    .headerContainer{
+        height: 90vh;
+        padding: 3.87rem 2rem;
+    }
+
+    .headerDesktop{
+        display: none;
+    }
+
+    header.headerMobile{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .headerMobileTop{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1;
+    }
+
+    .headerMobile span.menuIcon{
+        display: inline-block;
+        width: 1.85rem;
+        background-size: cover;
+        height: 1.85rem;
+        background-image: url(/images/icon-hamburger.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        transition: all 0.4s;
+    }
+
+    .headerMobile .menuMobile{
+        display: none;
+        position: absolute;
+        z-index: 10;
+        left: 50%;
+        flex-direction: column;
+        width: 20rem;
+        padding: 2rem;
+        background-color: var(--white);
+        border-radius: 10px;
+        margin-top: 4rem;
+        align-items: center;
+        box-shadow: 0px 13px 20px 2px rgba(74,74,74,0.6);
+        transition: all 0.4s;
+    }
+
+    .mobileDropdownContent{
+        background-color: #EFEFF1;
+        padding: 2rem 1rem;
+        width: 100%;
+        margin-top: 1.5rem;
+        border-radius: 5px;
+        display: none;
+        flex-direction: column;
+    }
+    
+    .mobileDropdownContent a{
+        color: var(--desaturated-blue) !important;
+    }
+    
+    .mobileDropdownContent a + a{
+        margin-top: 1rem;
+    }
+    
+    .mobileDropdownContent a:hover{
+        color: var(--blue-black);
+        font-weight: 700;
+    }
+    
+    .mobileDropdownItem{
+        padding-bottom: 1.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .mobileAuthButtons{
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid #EFEFF1;
+        width: 100%;
+        padding: 2rem;
+        align-items: center;
+    }
+
+    .mobileAuthButtons button{
+        border: none;
+        width: 8.62rem;
+        height: 2.87rem;
+        border-radius: 20px;
+        font-weight: 700;
+    }
+
+    .mobileAuthButtons button:first-child{
+        background-color: transparent;
+        color: var(--blue-dark);    
+    }
+
+    .mobileAuthButtons button:last-child{
+        background: linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        color: var(--white);  
+        margin-top: 1rem;  
+    }
+
+    .mobileDropdownItem:hover .mobileDropdownContent,
+    .mobileDropdownItem:active .mobileDropdownContent,
+    .mobileDropdownItem:focus .mobileDropdownContent{
+        display: flex;
+    }
+
+    .mobileMenuItem{
+        color: var(--blue-dark);
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+    
+    .mobileMenuItem::after{
+        content: url('/images/icon-arrow-dark.svg');
+        margin-left: 0.3rem;
+        margin-right: 1rem;
+        display: inline-block;
+        transition: transform 0.2s;
+    }
+
+    .mobileMenuItem:hover,
+    .mobileMenuItem:active,
+    .mobileMenuItem:focus{
+       opacity: 0.7;
+    }
+
+    .mobileDropdownItem:hover .mobileMenuItem::after,
+    .mobileDropdownItem:active .mobileMenuItem::after,
+    .mobileDropdownItem:focus .mobileMenuItem::after{
+        transform: rotate(180deg) translateY(-3px);
+    }
+
+    .headerMobile .menuMobile.showMenu{
+        display: flex;
+        animation-name: showUp;
+        animation-duration: 0.4s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards ;
+        opacity: 0;
+        transform: translate(-50%, 0%);
+    }
+
+
+    @keyframes showUp {
+        0% {opacity: 0; transform: translate(-50%, 150%);}
+        100% {opacity: 1; transform: translate(-50%, 0%);}
+    }
+
+    .headerMobile .menuMobile.closeMenu{
+        animation-name: closeDown;
+        animation-duration: 0.4s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards ;
+        opacity: 1;
+        transform: translate(-50%, 150%);
+    }
+
+    @keyframes closeDown {
+        0% {opacity: 1; transform: translate(-50%, 0%);}
+        100% {opacity: 0; transform: translate(-50%, 150%);}
+    }
+    
+    .buttonsContainer {
+        margin-top: 3.3rem;
+    }
+
+    span.headerBackgroundImage{
+        background-position: 38% 38%;
+        background-size: 330%;
+    }
+}

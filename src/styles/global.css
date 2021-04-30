@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --red: hsl(356, 100%, 66%);
+    --red-light: hsl(355, 100%, 74%);
+    --blue-dark: hsl(208, 49%, 24%);
+    --white: hsl(0, 0%, 100%);
+    --grayish-blue: hsl(240, 2%, 79%);
+    --grayish-blue-dark: hsl(207, 13%, 34%);
+    --blue-black: hsl(240, 10%, 16%);
+    --desaturated-blue:hsl(237, 23%, 32%);
+}
+
+body, input, textarea, button{
+    font: 500 1rem Ubuntu, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: Overpass, sans-serif;
+}
+
+button{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 375px){
+    html{
+        font-size: 87.5%; 
+    }
+}
